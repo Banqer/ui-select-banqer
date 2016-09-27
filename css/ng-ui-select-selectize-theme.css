@@ -131,30 +131,27 @@
 .selectize-input,
 .selectize-input input {
   font-family: inherit;
-  font-size: 13px;
+  font-size: 15px;
   -webkit-font-smoothing: inherit;
-  line-height: 18px;
+  line-height: 23px;
   color: #303030;
 }
 
 .selectize-input,
 .selectize-control.single .selectize-input.input-active {
   display: inline-block;
-  cursor: text;
   background: #ffffff;
+  cursor: text;
 }
 
 .selectize-input {
-  position: relative;
   z-index: 1;
+  position: relative;
   display: inline-block;
   width: 100%;
   padding: 8px 8px;
   overflow: hidden;
-  border: 1px solid #d0d0d0;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+  border: 2px solid #3E74A4 !important; /* $banqerBlue */
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
   -webkit-box-sizing: border-box;
@@ -297,8 +294,8 @@
 }
 
 .selectize-dropdown .active {
-  color: #495c68;
-  background-color: #f5fafd;
+  color: #FFF;
+  background-color: #3E74A4;
 }
 
 .selectize-dropdown .active.create {
@@ -439,4 +436,20 @@
 
 .selectize-dropdown .optgroup:first-child {
   border-top: 0 none;
+}
+
+
+/* Helper class to show styles when focus */
+.selectize-input .selectize-focus {
+  border-color: #3E74A4 !important;
+}
+
+/* Fix input width for Selectize theme */
+.selectize-control > .selectize-input > input {
+  width: 100%;
+}
+
+/* Fix dropdown width for Selectize theme */
+.selectize-control > .selectize-dropdown {
+  width: 100%;
 }
